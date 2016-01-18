@@ -10,17 +10,11 @@ class Command(NoArgsCommand):
         jpy.take_profit = 135.92
         jpy.stop_loss = 137.12
         jpy.buy = False
-        jpy.start()
-
-        time.sleep(5)
+        jpy.start_pending()
 
         cad = ZTrade()
         cad.currency = "USD/CAD"
         cad.take_profit = 1.32001
         cad.stop_loss = 1.2918
         cad.buy = True
-        cad.start()
-
-        time.sleep(5)
-
-        cad.stop()
+        cad.start_market()
